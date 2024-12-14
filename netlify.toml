@@ -1,5 +1,10 @@
 [build]
-  base = "/"
-  publish = "public"
-  command = "npm run build"
-  functions = "functions"
+  publish = "/"
+  command = "echo 'No build command required'"
+
+# Optional: Add redirects if necessary (for example, if you have a `404.html` file).
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
