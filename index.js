@@ -15,7 +15,7 @@ app.use(express.json());
 
 // Endpoint to get the QR code URL
 app.get('/generate-qr', (req, res) => {
-    const otpauth = otplib.authenticator.keyuri('v c', 'TOTP Demo', secret);
+    const otpauth = otplib.authenticator.keyuri('user', 'TOTP Generator', secret);
     qrcode.toDataURL(otpauth, (err, qrCodeUrl) => {
         if (err) return res.status(500).send('Error generating QR code');
         res.json({ qrCodeUrl });
