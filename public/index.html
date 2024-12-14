@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TOTP Demo</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+
+            input {
+                padding: 8px;
+                margin: 10px 0;
+            }
+
+            button {
+                padding: 10px 20px;
+                cursor: pointer;
+            }
+
+            #qr-code {
+                max-width: 200px;
+                margin-top: 20px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <h1>TOTP Demo</h1>
+        <div id="qr-container">
+            <p>Scan the QR code with your TOTP app (e.g., Google Authenticator).</p>
+            <img id="qr-code" />
+        </div>
+        <div>
+            <input type="text" id="totp-input" placeholder="Enter TOTP" />
+            <button id="verify-button">Verify</button>
+            <p id="result"></p>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
