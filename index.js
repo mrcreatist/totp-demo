@@ -14,8 +14,8 @@ app.use(express.static('public')); // Serve static files like HTML and JS
 app.use(express.json());
 
 // Endpoint to get the QR code URL
-app.get('/generate-qr', (req, res) => {
-    const otpauth = otplib.authenticator.keyuri('user', 'TOTP', secret);
+app.get('/generate-qr', (req, res) => {``
+    const otpauth = otplib.authenticator.keyuri('user', 'MyApp', secret);
     qrcode.toDataURL(otpauth, (err, qrCodeUrl) => {
         if (err) return res.status(500).send('Error generating QR code');
         res.json({ qrCodeUrl });
